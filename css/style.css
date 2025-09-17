@@ -198,21 +198,22 @@ button.welcome_start:hover{
     align-items: center;
     min-height: 695px;
     margin-top: 123px;
-    transform: translateY(80px);
+    padding: 0;
+    box-sizing: border-box;
+    
 }
 .text-overlow{
     display: flex;
     flex-direction: column;
-    width: 1170px;
+    width: 100%;
+    max-width: 1226px;
+    margin: 0 auto;
     justify-content: center;
     background-image: url(../image/what_is_gpt_3_bg.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding-left: 61px;
-    padding-right: 52px;
-    padding-top: 57px;
-    padding-bottom: 63px;
+    padding: 60px;
     box-sizing: border-box;
 }
 .gpt-header{
