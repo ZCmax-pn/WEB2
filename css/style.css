@@ -197,10 +197,9 @@ button.welcome_start:hover{
     justify-content: center;
     align-items: center;
     min-height: 695px;
-    margin-top: 123px;
     padding: 0;
     box-sizing: border-box;
-    
+    margin-top: 246px;
 }
 .text-overlow{
     display: flex;
@@ -242,6 +241,7 @@ button.welcome_start:hover{
     line-height: 30px;
     margin: 0;
     max-width: 720px;
+    padding-top: 22px;
 }
 .gpt-grid{
     display: grid;
@@ -258,6 +258,7 @@ button.welcome_start:hover{
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 58px;
+    
 }
 .gpt-osnovn{
     font-size: 34px;
@@ -306,4 +307,521 @@ button.welcome_start:hover{
     color: #81AFDD;
     padding-top: 26px;
     line-height: 30px
+}
+/* будущее наступило */
+
+.future-is-now .container{
+    margin-top: 200px;
+}
+
+.future-grid{
+    display: flex;
+    justify-content: space-between;
+    gap: 138px;
+}
+
+.future-left {
+    flex: 0 0 426px;
+}
+
+.future-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.future-item {
+    display: flex;
+    gap: 138px;
+}
+
+.future-text-wrapper {
+    flex: 0 0 182px;
+}
+
+.future-desc-wrapper {
+    flex: 0 0 334px;
+}
+
+.future-title {
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 45px;
+    background: linear-gradient(to right, #AE67FA,#F49867);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: pre-line;
+    margin-bottom: 40px;
+}
+
+.future-desc {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #FF8A71;
+    margin: 0;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+.future-desc:hover{
+    color: #fff;
+}
+
+.right-text {
+    font-size: 18px;
+    position: relative;
+    padding-top: 10px;
+    margin: 0 0 10px 0;
+    white-space: nowrap;
+}
+
+.right-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 3px;
+    background: linear-gradient(to right, #AE67FA, #F49867);
+    border-radius: 2px;
+}
+.right-text-2 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #81AFDD;
+    margin: 0;
+}
+/*my apps с женщиной*/
+.my-apps .container{
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 200px;
+}
+
+.my-apps-wrapper {
+    width: 479px;
+    margin-top: 200px;
+    flex-shrink: 0;
+    transform: translateX(-100px); 
+}
+.my-apps-image{ 
+    margin-left:30px;
+}
+
+.my-apps-text-1{ 
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #81AFDD;
+    margin-bottom: 21px;
+}
+
+.my-apps-title {
+    grid-column: 1;
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 45px;
+    background: linear-gradient(to right, #AE67FA,#F49867);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: pre-line;
+    margin-bottom: 21px;
+}
+.my-apps-desc {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #FF8A71;
+    margin: 0;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+.my-apps-desc:hover{
+    color: #ffffff;
+}
+
+/*штука*/
+.cta .container{
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 200px;
+}
+
+.cta-background{
+    position: relative;
+    max-width: 1226px;
+    height: 172px;
+    background: linear-gradient(to right, #AE67FA, #F49867);
+    border-radius: 20px; 
+    display: flex;
+    flex-direction: column;   
+    justify-content: center; 
+    align-items: center;  
+    text-align: center;
+    padding: 40px;           
+    text-align: left;
+    box-sizing: border-box;
+}
+.btn-cta{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    position: absolute;
+    right: 0;
+    margin-right: -70px;
+    top: 50%;
+    transform: translateY(-50%); 
+}
+.cta-start{
+    width: 189px;
+    height: 60px;
+    font-size: 20px;
+    margin-right:900px;
+    background: #000000;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border: none;
+    color: #fff;
+    transition: all 0.3s ease-out;
+    margin-right:120px;
+}
+button.cta-start{
+    transition: all 0.3s ease-out;
+}
+button.cta-start:hover{
+    transition: all 0.3s ease-out;
+    background-color: #FF4820;
+}
+.cta-text-1{
+    font-size: 12px;
+    font-weight: 500;
+    color: #000000;
+    margin-right: 0;
+    text-align: left;
+    margin-bottom: -10px;
+    width: 100%;
+}
+.cta-text-2{
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 35px;
+    color: #000000;
+    text-align: left;
+    width: 100%;
+}
+/* - секция блога - */
+.blog {
+    max-width: 1226px;                  
+    margin: 155px auto 134px auto;
+    position: relative;   
+}
+.blog-header h2 {
+    width: 699px;                    
+    height: 150px;                   
+    font-weight: 800;                
+    font-size: 62px;                 
+    line-height: 75px;               
+    letter-spacing: -0.04em;         
+    background: linear-gradient(89.44deg, #AE67FA 1.84%, #F49867 97%); 
+    -webkit-background-clip: text;   
+    background-clip: text;           
+    -webkit-text-fill-color: transparent; 
+    color: transparent;              
+    text-align: left;                
+    margin-right: 472px;            
+    white-space: nowrap;
+}
+.blog-grid {
+    width: 1226px;
+    display: grid;
+    grid-template-columns: 418px 327px 327px;
+    grid-template-rows: repeat(2, auto); /* Две строки автоматической высоты */
+    gap: 20px; /* Добавляем отступ между карточками */
+    justify-content: space-between;
+    margin-top: 116px;
+    align-items: start; /* Выравниваем все элементы по верху */
+} 
+.blog-card {
+    width: 100%;
+    font-size: 0;
+}
+.blog-card.main-card {  
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    height: 100%; /* Занимает всю доступную высоту двух строк */
+    align-self: start; /* Ключевое - выравниваем по верху */
+}
+.main-card-content {
+    width: 100%;
+    height: 406.71px;
+    background: #042C54;
+    padding: 0;
+    box-sizing: border-box;
+    margin-top: 1.16px;
+    position: relative;
+}
+.blog-card img {
+    width: 100%;
+    height: 130.47px;
+    object-fit: cover;
+    font-size: 60px;
+}
+.blog-card.main-card .main-card-img {
+    width: 100%;
+    height: 287.34px;
+    object-fit: cover;
+}
+.blog-content {
+    width: 100%;
+    height: 193.37px;
+    padding: 6.74px 25.63px 13.63px 17.39px;
+    background: #042C54;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box; 
+}
+.blog-read-more {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 34.95px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    width: 148px;
+    height: 34.95px;
+    box-sizing: border-box;
+    margin-top: auto
+}
+
+.main-card-content .blog-read-more {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 34.95px;
+    text-decoration: none;
+    position: absolute;
+    top: 339.34px; 
+    left: 26.66px;
+    width: 148px;
+    height: 34.95px;
+}
+.blog-read-more:hover {
+    color: #FF8A71;
+    text-decoration: underline;
+}
+.main-card-text-container {
+    width: 100%;
+    height: 347.52px;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    }
+.blog-text-container {
+    width: 100%;
+    height: 172px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+} 
+.blog-date {
+    font-weight: 300;
+    font-size: 11.65px;
+    line-height: 34.95px;
+    text-align: left;
+    letter-spacing: 0;
+    width: 100%;    
+    align-self: flex-start; /* Исправлена опечатка */  
+}
+
+/* - дата в большой карточке - */
+.main-card-blog-date {
+    font-weight: 300;
+    font-size: 11.65px;
+    line-height: 34.95px;
+    text-align: left;
+    letter-spacing: 0;
+    width: 100%;
+    height: 34.95px;
+    position: absolute;
+    top: 26.66px; 
+    left: 26.77px;  
+    margin: 0;
+    }
+
+.blog-title {
+    font-weight: 800;
+    font-size: 19px;
+    line-height: 30.29px;
+    margin: 10px 0;
+    white-space: nowrap;
+    
+}
+.main-card-blog-title {
+    font-weight: 800;
+    font-size: 25.11px;
+    line-height: 30.29px;
+    position: absolute;
+    top: 61.97px; 
+    left: 26.79px;
+    width: 100%;
+    height: 90.74px;
+    margin: 0;
+}
+.blog-content,
+.main-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.blog-content {
+    height: calc(100% - 130.47px);
+}
+.main-card-content {
+    height: calc(100% - 287.34px);
+}
+/* Секция "Будущее" */
+/* Основной цветной блок */
+.section-future {
+    max-width: 1440px;
+    width: 100%;
+    background: #031B34;
+    margin-top: 133.79px;
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    padding-top: 196px;
+    padding-bottom: 103px;
+}
+
+/* Контейнер для центрирования контента */
+.section-future-container {
+    max-width: 1226px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* Обертка для контента с отступом от верха цветного блока */
+.section-future-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Заголовок с градиентным текстом */
+.section-future-title {
+    width: 821px;
+    max-width: 90%;
+    background: linear-gradient(89.44deg, #AE67FA 1.84%, #F49867 97%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-size: 62px;
+    font-weight: 800;
+    line-height: 75px;
+    letter-spacing: -0.04em;
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+/* Кнопка с рамкой */
+.section-future-button {
+    width: 337.58px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1px solid #FFFFFF;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+    margin-bottom: 80px;
+}
+
+.section-future-button:hover {
+    color: rgba(255, 255, 255, 1);
+    border-color: #FF4820;
+    background-color: rgba(255, 72, 32, 0.1);
+}
+
+/* Контейнер информации футера */
+.information-future {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Колонки футера */
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    text-align: left;
+}
+
+.footer-column h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+.light-text {
+    font-weight: 300;
+}
+.footer-column p {
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 34px;
+    font-weight: 200;
+    white-space: nowrap;
+}
+/* Стили для изображения */
+.future-img {
+    margin-bottom: -23px;
+    width: 130px;
+}
+ .footer-column:first-child {
+    margin-right: 288px;
+}
+footer{
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-text {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
 }
