@@ -10,13 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="gradient-spot spot-1"></div>
+    <!-- <div class="gradient-spot spot-1"></div>
     <div class="gradient-spot spot-2"></div>
-    <div class="gradient-spot spot-3"></div>
+    <div class="gradient-spot spot-3"></div> -->
     <div class = "header">
         <div class="container">
             <img src="./image/GPT-4.svg" alt="#" class="header-logo">
-            <div class="nav-header">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-header" id="navHeader">
                 <ul class="header-list">
                     <li><a class="active" href="#!">Главная</a></li>
                     <li><a href="#!">Что такое GPT?</a></li>
@@ -31,6 +36,7 @@
             </div>
         </div>
     </div>
+
     <div class="main">
         <section class="welcome">
             <div class="container">
@@ -171,7 +177,7 @@
         </section>
         <section class="blog">
             <div class="blog-header">
-                <h2>Многое Происходит,<br>Мы Ведем об Этом Блог.г</h2>
+                <h2>Многое Происходит,<br>Мы Ведем об Этом Блог.</h2>
             </div>
                 <!-- Контейнер с карточками -->
                 <div class="blog-grid">
@@ -279,5 +285,36 @@
     <footer>
         <p class="footer-text">© 2023 GPT-3. Все права защищены.</p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navHeader = document.getElementById('navHeader');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navHeader.classList.toggle('active');
+                if (navHeader.classList.contains('active')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                }
+            });
+            const navLinks = document.querySelectorAll('.nav-header a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenuBtn.classList.remove('active');
+                    navHeader.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    mobileMenuBtn.classList.remove('active');
+                    navHeader.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
