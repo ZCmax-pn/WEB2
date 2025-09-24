@@ -1,44 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPT-4</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="gradient-spot spot-1"></div>
-    <div class="gradient-spot spot-2"></div>
-    <div class = "header">
-        <div class="container">
-            <img src="./image/GPT-4.svg" alt="#" class="header-logo">
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="nav-header" id="navHeader">
-                <ul class="header-list">
-                    <li><a class="active" href="#!">Главная</a></li>
-                    <li><a href="#!">Что такое GPT?</a></li>
-                    <li><a href="#!">Open AI</a></li>
-                    <li><a href="#!">Кейсы</a></li>
-                    <li><a href="#!">Библиотека</a></li>
-                </ul>
-            </div>
-            <div class="btn">
-                <a href="#"><button class="btn-sign">Войти</button></a>
-                <a href="#"><button class="btn-sign-primary">Регистрация</button></a>
-            </div>
-        </div>
-    </div>
-
     <div class="main">
+
         <section class="welcome">
             <div class="container">
+                <div class="welcome1">
                 <div class="welcome-wrapper">
                     <h1 class="welcome-left">Построим Что-нибудь <span>Невероятное с</span> GPT-4 OpenAI</h1>
                     <p class="welcome-desk">Однако кровать для помощи в путешествии неприятна. Не 
@@ -53,19 +17,22 @@
                         <img class="people" src="./image/Group 81.svg" alt="#">
                         <a href="#" class="text-people">1,600 человек запросило доступ за последние  24 часа</a>
                     </div>
-                    <div class="welcome-web">
-                        <img src="./image/google.svg" alt="Google">
-                        <img src="./image/slack.svg" alt="Slack">
-                        <img src="./image/atlassian.svg" alt="Atlassian">
-                        <img src="./image/dropbox.svg" alt="Dropbox">
-                        <img src="./image/shopify.svg" alt="Shopify">
-                    </div>
-                </div>
-                    <div class="welcome-image">
+                </div>    
+                <div class="welcome-image">
                     <img src="./image/Header Illustration.png" alt="">
                 </div>
+                </div>
+                <div class="welcome-web">
+                    <img src="./image/google.svg" alt="#">
+                    <img src="./image/slack.svg" alt="#">
+                    <img src="./image/atlassian.svg" alt="#">
+                    <img src="./image/dropbox.svg" alt="#">
+                    <img src="./image/shopify.svg" alt="#">
+                </div>
             </div>
+            
         </section>
+
         <section class="GPT">
             <div class="container">
                 <div class="text-overlow">
@@ -102,7 +69,8 @@
                     </div>
                 </div>
         </section>
-            <section class="future-is-now">
+
+        <section class="future-is-now">
                 <div class="container">
                     <div class="future-grid">
                         <div class="future-left">
@@ -150,6 +118,7 @@
                     </div>
                 </div>
         </section>
+
         <section class ="my-apps">
             <div class="container">
                 <div class="my-apps-image">
@@ -164,22 +133,23 @@
                 </div>
             </div>
         </section>
-        <section class="cta">
+
+        <section class = "CTA">
             <div class="container">
                 <div class="cta-background">
-                    <div class="cta-text-content">
-                        <h1 class="cta-text-1">Запросите ранний доступ</h1>
-                        <p class="cta-text-2">Зарегистрируйтесь и начните исследовать<br>безграничные возможности.</p>
-                    </div>
+                    <h1 class="cta-text-1">Запросите ранний доступ</h1>
+                    <p class="cta-text-2">Зарегистрируйтесь и начните исследовать<br>безграничные возможности.</h1>
                     <div class="btn-cta">
                         <button class="cta-start">Начать</button>
                     </div>
                 </div>
             </div>
         </section>
+
         <section class="blog">
+            <div class="container">
             <div class="blog-header">
-                <h2>Многое Происходит,<br>Мы Ведем об Этом Блог.</h2>
+                <h2>Многое Происходит,<br>Мы Ведем об Этом Блог.г</h2>
             </div>
                 <!-- Контейнер с карточками -->
                 <div class="blog-grid">
@@ -189,7 +159,7 @@
                         <div class="main-card-content">
                         <div class="main-card-text-container"> 
                                 <div class="main-card-blog-date">Сентябрь 26, 2021</div>
-                                <div class="main-card-blog-title">GPT-3 и Openai – <br> это будущее. Давайте разберемся, как это?</div>
+                                <div class="main-card-blog-title">GPT-3 и Openai – это будущее. Давайте разберемся, как это?</div>
                                 <a href="#!" class="blog-read-more">Читать полную статью</a>
                             </div>
                         </div>
@@ -197,11 +167,11 @@
 
                     <!-- 1 карточка -->
                     <div class="blog-card">
-                        <img src="./image/Rectangle 22.png" alt="Блог пост 2">
+                        <img src="./image/Rectangle1.svg" alt="Блог пост 2">
                         <div class="blog-content">
                             <div class="blog-text-container"> 
                                 <div class="blog-date">Сентябрь 26, 2021</div>
-                                <div class="blog-title">GPT-3 и Openai – это будущее.<br>Давайте разберемся, как <br>это?</div>
+                                <div class="blog-title">GPT-3 и Openai – это будущее. Давайте разберемся, как это?</div>
                                 <a href="#!" class="blog-read-more">Читать полную статью</a>
                             </div>
                         </div>
@@ -213,7 +183,7 @@
                         <div class="blog-content">
                             <div class="blog-text-container"> 
                                 <div class="blog-date">Сентябрь 26, 2021</div>
-                                <div class="blog-title">GPT-3 и Openai – это будущее.<br>Давайте разберемся, как <br>это?</div>
+                                <div class="blog-title">GPT-3 и Openai – это будущее. Давайте разберемся, как это?</div>
                                 <a href="#!" class="blog-read-more">Читать полную статью</a>
                             </div>
                         </div>
@@ -225,7 +195,7 @@
                         <div class="blog-content">
                             <div class="blog-text-container"> 
                                 <div class="blog-date">Сентябрь 26, 2021</div>
-                                <div class="blog-title">GPT-3 и Openai – это будущее.<br>Давайте разберемся, как <br>это?</div>
+                                <div class="blog-title">GPT-3 и Openai – это будущее. Давайте разберемся, как это?</div>
                                 <a href="#!" class="blog-read-more">Читать полную статью</a>
                             </div>
                         </div>
@@ -237,15 +207,19 @@
                         <div class="blog-content">
                             <div class="blog-text-container"> 
                                 <div class="blog-date">Сентябрь 26, 2021</div>
-                                <div class="blog-title">GPT-3 и Openai – это будущее.<br>Давайте разберемся, как <br>это?</div>
+                                <div class="blog-title">GPT-3 и Openai – это будущее. Давайте разберемся, как это?</div>
                                 <a href="#!" class="blog-read-more">Читать полную статью</a>
                             </div>
                         </div>
                     </div>
                 </div>
-
+            </div>
+        </div>
         </section>
+
+        
         <section class="section-future">
+            <div class="container">
             <div class="section-future-container">
                 <div class="section-future-content">
                     <h2 class="section-future-title">Хотите Шагнуть в Будущее Раньше Других?</h2>
@@ -258,65 +232,37 @@
                                 Все права защищены</p>
                         </div>
 
-                        <div class="footer-column">
-                            <h3>Ссылки</h3>
-                            <a>Оверсен</a>
-                            <a>Соц. сети</a>
-                            <a>Счетчики</a>
-                            <a>Контакты</a>
-                        </div>
-                        
-                        <div class="footer-column">
-                            <h3>Компания</h3>
-                            <a>Условия использования</a>
-                            <a>Перс. данные</a>
-                            <a>Контакты</a>
-                        </div>
-                        
-                        <div class="footer-column">
-                            <h3>Контакты</h3>
-                            <a class="light-text">ул. Профессора <br> Поздеева, 13, к.Г, Пермь</a>
-                            <a>+7 (342) 2-198-520</a>
-                            <a>info@pstu.ru</a>
+                        <div class="straight-columns">
+                            
+                            <div class="footer-column-link">
+                                <h3>Ссылки</h3>
+                                <a>Оверсен</a>
+                                <a>Соц. сети</a>
+                                <a>Счетчики</a>
+                                <a>Контакты</a>
+                            </div>
+                            
+                            <div class="footer-column-link">
+                                <h3>Компания</h3>
+                                <a>Условия использования</a>
+                                <a>Перс. данные</a>
+                                <a>Контакты</a>
+                            </div>
+                            
+                            <div class="footer-column-link">
+                                <h3>Контакты</h3>
+                                <a>ул. Профессора <br> Поздеева, 13, к.Г, Пермь</a>
+                                <a>+7 (342) 2-198-520</a>
+                                <a>info@pstu.ru</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </section>
+        
     </div>
     <footer>
         <p class="footer-text">© 2023 GPT-3. Все права защищены.</p>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const navHeader = document.getElementById('navHeader');
-            
-            mobileMenuBtn.addEventListener('click', function() {
-                this.classList.toggle('active');
-                navHeader.classList.toggle('active');
-                if (navHeader.classList.contains('active')) {
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    document.body.style.overflow = '';
-                }
-            });
-            const navLinks = document.querySelectorAll('.nav-header a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    mobileMenuBtn.classList.remove('active');
-                    navHeader.classList.remove('active');
-                    document.body.style.overflow = '';
-                });
-            });
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768) {
-                    mobileMenuBtn.classList.remove('active');
-                    navHeader.classList.remove('active');
-                    document.body.style.overflow = '';
-                }
-            });
-        });
-    </script>
-</body>
-</html>

@@ -1,10 +1,21 @@
 /* Общие стили */
-
 body {
     margin: 0;
     font-family: "Manrope", sans-serif;
     background-color: #040C18;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Общий контейнер для центрирования */
+.main-wrapper {
+    width: 100%;
+    max-width: 1226px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .gradient-spot {
@@ -22,23 +33,17 @@ body {
     width: 1013px;
     height: 1013px;
     top: -290px;
-    left: -409px;
+    left: calc(50% - 613px); /* Центрирование относительно 1226px */
+    transform: translateX(-50%);
 }
 
 /* Второе пятно */
 .spot-2 {
     width: 777px;
     height: 777px;
-    left: -444px;
+    left: calc(50% - 613px);
     top: 1712px;
-}
-
-/* Третье пятно */
-.spot-3 {
-    width: 701px;
-    height: 496px;
-    left: 1127px;
-    top: 500px;
+    transform: translateX(-50%);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -73,10 +78,20 @@ ul {
     margin: 0;
 }
 
-.container {
+/* Центрирование и ограничение ширины всего контента */
+.header,
+.welcome,
+.GPT,
+.future-is-now,
+.my-apps,
+.cta,
+.blog,
+.section-future {
+    width: 100%;
     max-width: 1226px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 /* Шапка */
@@ -90,6 +105,8 @@ ul {
     align-items: center;
     flex-wrap: nowrap;
     min-width: 0;
+    max-width: 1226px;
+    width: 100%;
 }
 
 .header-list {
@@ -195,6 +212,8 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    max-width: 1226px;
+    width: 100%;
 }
 
 .welcome-wrapper {
@@ -290,6 +309,7 @@ button.welcome_start:hover {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
+    max-width: 1226px;
     gap: 46px;
 }
 
@@ -426,6 +446,8 @@ button.welcome_start:hover {
 /* будущее наступило */
 .future-is-now .container {
     margin-top: 200px;
+    max-width: 1226px;
+    width: 100%;
 }
 
 .future-grid {
@@ -518,6 +540,8 @@ button.welcome_start:hover {
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 200px;
+    max-width: 1226px;
+    width: 100%;
 }
 
 .my-apps-wrapper {
@@ -570,60 +594,48 @@ button.welcome_start:hover {
 .cta .container {
     margin-top: 200px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     margin-bottom: 200px;
+    max-width: 1226px;
+    width: 100%;
 }
 
 .cta-background {
     position: relative;
     max-width: 1226px;
+    width: 100%;
     height: 172px;
     background: linear-gradient(to right, #AE67FA, #F49867);
     border-radius: 20px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between; /* Равномерное распределение */
     align-items: center;
-    text-align: center;
     padding: 40px;
-    text-align: left;
     box-sizing: border-box;
 }
 
+.cta-text-content {
+    flex: 1;
+    text-align: left;
+}
+
 .btn-cta {
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    position: absolute;
-    right: 0;
-    margin-right: -70px;
-    top: 50%;
-    transform: translateY(-50%);
+    margin-left: auto; /* Кнопка прижимается к правому краю */
 }
 
 .cta-start {
     width: 189px;
     height: 60px;
     font-size: 20px;
-    margin-right: 900px;
     background: #000000;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
+    border-radius: 50px;
     border: none;
     color: #fff;
-    transition: all 0.3s ease-out;
-    margin-right: 120px;
-}
-
-button.cta-start {
     transition: all 0.3s ease-out;
 }
 
 button.cta-start:hover {
-    transition: all 0.3s ease-out;
     background-color: #FF4820;
 }
 
@@ -631,10 +643,7 @@ button.cta-start:hover {
     font-size: 12px;
     font-weight: 500;
     color: #000000;
-    margin-right: 0;
-    text-align: left;
-    margin-bottom: -10px;
-    width: 100%;
+    margin-bottom: 5px;
 }
 
 .cta-text-2 {
@@ -642,15 +651,16 @@ button.cta-start:hover {
     font-weight: 800;
     line-height: 35px;
     color: #000000;
-    text-align: left;
-    width: 100%;
 }
 
 /* - секция блога - */
 .blog {
     max-width: 1226px;
+    width: 100%;
     margin: 155px auto 134px auto;
     position: relative;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .blog-header h2 {
@@ -671,7 +681,8 @@ button.cta-start:hover {
 }
 
 .blog-grid {
-    width: 1226px;
+    width: 100%;
+    max-width: 1226px;
     display: grid;
     grid-template-columns: 418px 327px 327px;
     grid-template-rows: repeat(2, auto);
@@ -838,8 +849,8 @@ button.cta-start:hover {
 
 /* Секция "Будущее" */
 .section-future {
-    max-width: 1440px;
-    width: 100%;
+    max-width: 100%;
+    width: 100vw;
     background: #031B34;
     margin-top: 133.79px;
     margin-bottom: 18px;
@@ -847,8 +858,8 @@ button.cta-start:hover {
     justify-content: center;
     align-items: flex-start;
     position: relative;
-    padding-top: 196px;
-    padding-bottom: 103px;
+    padding: 196px 0 103px; /* Убрали боковые padding */
+    box-sizing: border-box;
 }
 
 .section-future-container {
@@ -857,6 +868,8 @@ button.cta-start:hover {
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    padding: 0 20px; /* Добавили padding к контейнеру */
+    box-sizing: border-box;
 }
 
 .section-future-content {
@@ -938,6 +951,21 @@ button.cta-start:hover {
     font-weight: 200;
     white-space: nowrap;
 }
+.footer-column a {
+    display: block;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 34px;
+    font-weight: 200;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-column a:hover {
+    color: #FF8A71;
+}
 
 .future-img {
     margin-bottom: -23px;
@@ -953,6 +981,10 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 1226px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .footer-text {
