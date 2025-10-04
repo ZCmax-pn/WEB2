@@ -135,23 +135,32 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    position: relative;
+    min-width: 0;
 
 }
 .welcome-wrapper{
-    width: 700px;
+    flex: 1;
+    max-width: 700px; 
     margin-top: 96px;
-    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
 }
 
 .welcome-left{
     margin-bottom: 33px;
     font-size: 62px;
+    line-height: 1.1;
     background: linear-gradient(to right, #AE67FA,#F49867);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
     letter-spacing: -2 px;
+    white-space: nowrap;
+    overflow: visible;
+    margin-right: -100px; 
+    padding-right: 100px;
 }
 .welcome-desk{
     margin-bottom: 44px;
@@ -161,7 +170,10 @@ ul {
     color: #81AFDD;
 }
 .welcome-image {
-    margin-left: -95px;
+    flex-shrink: 0;
+    margin-left: 0;
+    z-index: 1;
+    margin-left: -50px;
 }
 .Email-welcome{
     background: transparent;
@@ -348,11 +360,12 @@ button.welcome_start:hover{
 .future-grid{
     display: flex;
     justify-content: space-between;
-    gap: 138px;
+    gap: 80px;
 }
 
 .future-left {
-    flex: 0 0 426px;
+    flex: 0 0 auto; 
+    min-width: 450px; 
 }
 
 .future-right {
@@ -364,15 +377,18 @@ button.welcome_start:hover{
 
 .future-item {
     display: flex;
-    gap: 138px;
+    gap: 40px;
+    align-items: flex-start;
 }
 
 .future-text-wrapper {
-    flex: 0 0 182px;
+    flex: 1;
+    min-width: 200px;
 }
 
 .future-desc-wrapper {
-    flex: 0 0 334px;
+    flex: 2;
+    min-width: 300px;
 }
 
 .future-title {
@@ -403,9 +419,10 @@ button.welcome_start:hover{
 .right-text {
     font-size: 18px;
     position: relative;
+    white-space: normal;
     padding-top: 10px;
     margin: 0 0 10px 0;
-    white-space: nowrap;
+    line-height: 1.3;
 }
 
 .right-text::before {
@@ -555,10 +572,19 @@ button.cta-start:hover{
     max-width: 1226px;                  
     margin: 155px auto 134px auto;
     position: relative;   
+    padding: 0 20px; 
+    overflow: visible;
+}
+.blog-header {
+    position: relative;
+    z-index: 2;
+    margin-right: -200px; 
+    padding-right: 200px; 
 }
 .blog-header h2 {
-    width: 699px;                    
-    height: 150px;                   
+    width: auto;
+    max-width: 699px;                    
+    height: auto;                   
     font-weight: 800;                
     font-size: 62px;                 
     line-height: 75px;               
@@ -569,13 +595,15 @@ button.cta-start:hover{
     -webkit-text-fill-color: transparent; 
     color: transparent;              
     text-align: left;                
-    margin-right: 472px;            
+    margin-right: 0;            
     white-space: nowrap;
+    overflow: visible; 
+    max-width: none;
 }
 .blog-grid {
-    width: 1226px;
+    width: 100%;
     display: grid;
-    grid-template-columns: 418px 327px 327px;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(2, auto); 
     gap: 20px; 
     justify-content: space-between;
