@@ -123,6 +123,12 @@ ul {
 }
 
 /* Welcome (основная секция) */
+
+.welcome {
+    max-width: 100%;
+    overflow: hidden;
+}
+
 .welcome .container {
     display: flex;
     flex-direction: column;
@@ -524,7 +530,7 @@ button.welcome_start:hover{
     justify-content: left;
     position: absolute;
     right: 0;
-    margin-right: -70px;
+    /* margin-right: -70px; */
     top: 50%;
     transform: translateY(-50%); 
 }
@@ -578,8 +584,8 @@ button.cta-start:hover{
 .blog-header {
     position: relative;
     z-index: 2;
-    margin-right: -200px; 
-    padding-right: 200px; 
+    /* margin-right: -200px; 
+    padding-right: 200px;  */
 }
 .blog-header h2 {
     width: auto;
