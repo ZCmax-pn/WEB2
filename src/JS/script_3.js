@@ -1,4 +1,3 @@
-// Шаблон для карточки блога
 function createBlogCard(post) {
   if (post.isMain) {
     return `
@@ -28,13 +27,9 @@ function createBlogCard(post) {
     `;
   }
 }
-
-// Шаблон для логотипа компании
 function createCompanyLogo(company) {
   return `<img src="${company.logo}" alt="${company.name}">`;
 }
-
-// Шаблон для навигации
 function createNavLink(link) {
   return `<li><a href="${link.href}">${link.text}</a></li>`;
 }

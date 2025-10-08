@@ -1,4 +1,3 @@
-// блог
 const blogPosts = [
   {
     id: 1,
@@ -9,7 +8,7 @@ const blogPosts = [
   },
   {
     id: 2,
-    image: 'images/Rectangle1.svg',
+    image: 'images/Rectangle1.svg', 
     date: 'Сентябрь 26, 2021',
     title: 'GPT-4 и Openai – это будущее. Давайте разберемся, как это?',
     isMain: false
@@ -17,7 +16,7 @@ const blogPosts = [
   {
     id: 3,
     image: 'images/Rectangle2.svg',
-    date: 'Сентябрь 26, 2021',
+    date: 'Сентябрь 26, 2021', 
     title: 'GPT-4 и Openai – это будущее. Давайте разберемся, как это?',
     isMain: false
   },
@@ -29,15 +28,13 @@ const blogPosts = [
     isMain: false
   },
   {
-    id: 5,
+    id: 5, 
     image: 'images/Rectangle4.svg',
     date: 'Сентябрь 26, 2021',
     title: 'GPT-4 и Openai – это будущее. Давайте разберемся, как это?',
     isMain: false
   }
 ];
-
-// компании
 const companies = [
   { name: 'Google', logo: 'images/google.svg' },
   { name: 'Slack', logo: 'images/slack.svg' },
@@ -45,8 +42,6 @@ const companies = [
   { name: 'Dropbox', logo: 'images/dropbox.svg' },
   { name: 'Shopify', logo: 'images/shopify.svg' }
 ];
-
-// навигация
 const navLinks = [
   { text: 'Главная', href: '#' },
   { text: 'Что такое GPT?', href: '#' },
@@ -54,3 +49,7 @@ const navLinks = [
   { text: 'Кейсы', href: '#' },
   { text: 'Библиотека', href: '#' }
 ];
+function showBlogPosts() {
+  console.log('Всего постов в блоге:', blogPosts.length);
+}
+export { blogPosts, companies, navLinks };

@@ -1,8 +1,9 @@
-// Функция для рендеринга блога
 function renderBlog() {
   const blogGrid = document.querySelector('.blog-grid');
-  if (!blogGrid) return;
-  
+  if (!blogGrid) {
+    console.log('Блог грид не найден');
+    return;
+  }
   blogGrid.innerHTML = '';
   
   blogPosts.forEach(post => {
@@ -11,10 +12,12 @@ function renderBlog() {
   });
 }
 
-// Функция для рендеринга компаний
 function renderCompanies() {
   const welcomeWeb = document.querySelector('.welcome-web');
-  if (!welcomeWeb) return;
+  if (!welcomeWeb) {
+    console.log('Блок компаний не найден');
+    return;
+  }
   
   welcomeWeb.innerHTML = '';
   
@@ -24,10 +27,12 @@ function renderCompanies() {
   });
 }
 
-// Функция для рендеринга навигации
 function renderNavigation() {
   const headerList = document.querySelector('.header-list');
-  if (!headerList) return;
+  if (!headerList) {
+    console.log('Меню не найдено');
+    return;
+  }
   
   headerList.innerHTML = '';
   
@@ -36,28 +41,23 @@ function renderNavigation() {
     headerList.insertAdjacentHTML('beforeend', navHTML);
   });
 }
-
-// Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', function() {
-  // Рендерим все компоненты
+  console.log('Страница загрузилась, рендерим всё');
+  
   renderNavigation();
   renderCompanies();
   renderBlog();
   
-  // Ваш существующий код для мобильного меню
   const navToggle = document.getElementById('navToggle');
   const navHeader = document.querySelector('.nav-header');
-  
   function toggleMobileMenu() {
     if (window.innerWidth <= 768) {
       navToggle.classList.toggle('active');
       navHeader.classList.toggle('active');
-      
       if (navHeader.classList.contains('active')) {
         navHeader.style.display = 'flex';
         navHeader.style.opacity = '0';
         navHeader.style.transform = 'translateY(-20px)';
-        
         setTimeout(() => {
           navHeader.style.transition = 'all 0.3s ease-out';
           navHeader.style.opacity = '1';
@@ -77,7 +77,6 @@ document.addEventListener('DOMContentLoaded', function() {
   if (navToggle) {
     navToggle.addEventListener('click', toggleMobileMenu);
   }
-  
   const navLinks = document.querySelectorAll('.nav-header a');
   navLinks.forEach(link => {
     link.addEventListener('click', function() {
@@ -86,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-  
+
   window.addEventListener('resize', function() {
     if (window.innerWidth > 768) {
       if (navHeader) {
