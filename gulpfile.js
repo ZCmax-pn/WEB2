@@ -1,80 +1,47 @@
-import gulp from 'gulp';
-import htmlmin from 'gulp-htmlmin';
-import cleanCSS from 'gulp-clean-css';
-import terser from 'gulp-terser';
-import fs from 'fs';
+import gulp from "gulp";
+import paths from "./gulp/config/paths.js";
+import plugins from "./gulp/config/plugins.js";
+import server from "./gulp/tasks/server.js";
+import cleanDist from "./gulp/tasks/cleanDist.js";
+import html from "./gulp/tasks/html.js";
+import js from "./gulp/tasks/js.js";
+import scss from "./gulp/tasks/scss.js";
+import img from "./gulp/tasks/img.js";
+import copyImages from "./gulp/tasks/copyImages.js";
+import { ttf, otfToTtf, ttfToWoff, fonts } from "./gulp/tasks/fonts.js";
+import files from "./gulp/tasks/files.js";
 
-const folderExists = (path) => {
-  try {
-    return fs.existsSync(path);
-  } catch (err) {
-    console.log('Ошибка с папкой:', err);
-    return false;
-  }
+// глобальные переменные
+global.app = {
+  isBuild: process.argv.includes("--build"),
+  isDev: !process.argv.includes("--build"),
+  paths: paths,
+  gulp: gulp,
+  plugins: plugins,
 };
 
-export const html = () => {
-  if (!folderExists('src')) {
-    console.log('Папки src нет, пропускаем HTML');
-    return Promise.resolve();
-  }
-  
-  return gulp.src('src/*.html')
-    .pipe(htmlmin({ 
-      collapseWhitespace: true 
-    }))
-    .pipe(gulp.dest('dist'));
-};
+// таск для конвертации шрифтов
+gulp.task("optimize", async function () {
+  return gulp.series(ttf, otfToTtf, ttfToWoff);
+});
 
-export const css = () => {
-  if (!folderExists('src/css')) {
-    console.log('Папки css нет, пропускаем CSS');
-    return Promise.resolve();
-  }
-  
-  return gulp.src('src/css/**/*.css')
-    .pipe(cleanCSS())
-    .pipe(gulp.dest('dist/css'));
-};
+// основные задачи
+const mainTasks = gulp.parallel(files, html, scss, js, img, fonts, copyImages);
 
-export const js = () => {
-  if (!folderExists('src/js')) {
-    console.log('Папки js нет, пропускаем JS');
-    return Promise.resolve();
-  }
-  
-  return gulp.src('src/js/**/*.js')
-    .pipe(terser())
-    .pipe(gulp.dest('dist/js'));
-};
+// наблюдатели за сменой файлов для пересборки
+function watcher() {
+  gulp.watch(paths.watch.files, files);
+  gulp.watch(paths.watch.html, html);
+  gulp.watch(paths.watch.scss, scss);
+  gulp.watch(paths.watch.js, js);
+  gulp.watch(paths.watch.img, img);
+  gulp.watch('src/images/**/*', copyImages);
+}
 
-export const images = () => {
-  if (!folderExists('src/images')) {
-    console.log('Папки images нет, пропускаем картинки');
-    return Promise.resolve();
-  }
-  
-  return gulp.src('src/images/**/*')
-    .pipe(gulp.dest('dist/images'));
-};
+// сценарии
+const dev = gulp.series(cleanDist, mainTasks, gulp.parallel(server, watcher));
+const build = gulp.series(cleanDist, mainTasks);
 
-export const fonts = () => {
-  if (!folderExists('src/fonts')) {
-    console.log('Папки fonts нет, пропускаем шрифты');
-    return Promise.resolve();
-  }
-  
-  return gulp.src('src/fonts/**/*')
-    .pipe(gulp.dest('dist/fonts'));
-};
+gulp.task("default", dev);
 
-export const watch = () => {
-  gulp.watch('src/*.html', html);
-  gulp.watch('src/css/**/*.css', css);
-  gulp.watch('src/js/**/*.js', js);
-  gulp.watch('src/images/**/*', images);
-  console.log('Слежу за изменениями...');
-};
-export const build = gulp.parallel(html, css, js, images, fonts);
-export const dev = gulp.series(build, watch);
-export default build;
+export { dev, build };
